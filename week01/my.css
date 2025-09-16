@@ -1,0 +1,268 @@
+body {
+  background-color: rgb(211, 232, 247);
+  margin: 0;
+  padding: 0;
+  padding-top: 70px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  background-color: #4CAF50 !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  padding: 1rem 1rem;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  color: yellow !important;
+}
+
+.navbar .navbar-brand {
+  font-size: 36px;
+}
+
+
+.menu {
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: #e8f5e9;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px 0;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu button {
+  background-color: #f0f4f8;
+  border: 2px solid #4ae28e;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #4a4a4a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu button:hover {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.menu button.active {
+  background-color: #6a79ff;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+
+h1 {
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #0d6efd;
+  border-bottom: 2px solid #0d6efd;
+  display: inline-block;
+  padding-bottom: 5px;
+  font-size: 1.5em;
+}
+
+.center-content {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.box {
+  border: 2px solid #4CAF50;
+  border-radius: 12px;
+  font-size: 20px;
+  padding: 10px 35px;
+  background-color: #e8f5e9;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin: 20px 10px;
+}
+
+.box:hover {
+  background-color: #c8e6c9;
+  transform: scale(1.05);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.center-content img {
+  border-radius: 8px;
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+#relation-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border: 5px solid #7fbc84;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.content-wrapper {
+  border: 2px solid #4CAF50;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  background-color: #ffffff;
+  width: 80%; 
+  padding-top: 70px;
+  position: relative;
+  z-index: 1;
+  margin-top: 125px;
+}
+
+footer {
+  font-size: 16px;
+}
+
+p {
+  font-size: 1em;
+  color: #000000;
+}
+
+
+ul{
+  list-style: none; 
+  padding: 0;
+}
+
+li{
+  margin-bottom: 10px;
+}
+
+b{
+  font-size: 1.25em;
+}
+
+.chart-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+
+.bar-chart {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+.bar {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  }
+
+.label {
+  width: 320px;
+  font-weight: 500;
+  }
+
+.progress {
+  height: 24px;
+  background: linear-gradient(90deg, #4fc3f7, #0288d1);
+  border-radius: 12px;
+  flex-shrink: 0;
+  }
+  
+.percent {
+  margin-left: 12px;
+  font-size: 14px;
+  color: #555;
+  }
+
+    
+table {
+  width: 100%;
+
+  font-size: 16px;
+}
+
+th, td {
+  border: 1px solid #d6e4f0;
+  padding:12px;
+  text-align: center;
+}
+
+th {
+  background-color: #e2f0fb;
+  color: #003366;
+}
+
+tr:nth-child(even) {
+  background-color: #f0f8ff;
+}
+
+tr:hover {
+  background-color: #d0ebff;
+  transition: background-color 0.3s;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 84, 153, 0.1);
+}
+
+
+  .menu button {
+    background-color: #f0f4f8;
+    border: 2px solid #4ae28e;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #4a4a4a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .menu button:hover {
+    background-color: #4a90e2;
+    color: white;
+  }
+
+  .menu button.active {
+    background-color: #6a79ff;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+  }

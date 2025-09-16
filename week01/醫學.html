@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>醫藥衛生學群</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="stylesheet" href="my.css">
+</head>
+<body>
+
+  <!-- 導覽列 -->
+ <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">醫藥衛生學群</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- 左邊導覽列 -->
+      <ul class="navbar-nav nav-underline">
+        <li class="nav-item"><a class="nav-link " href="醫藥衛生 web 期末報告.html">學群介紹</a></li>
+        <li class="nav-item"><a class="nav-link active" href="醫學.html">醫學</a></li>
+        <li class="nav-item"><a class="nav-link" href="牙醫.html">牙醫</a></li>
+        <li class="nav-item"><a class="nav-link" href="護理.html">護理</a></li>
+      </ul>
+
+      <!--最右邊的登入連結（靠右對齊） -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="登入.html">登入</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="menu" style="margin-top: 70px; text-align: center;">
+  <button onclick="showSection('學類介紹', event)">學類介紹</button>
+  <button onclick="showSection('生涯進路', event)">生涯進路</button>
+  <button onclick="showSection('高中準備', event)">高中準備</button>
+  <button onclick="showSection('能力特質', event)">能力特質</button>
+  <button onclick="showSection('對應校系', event)">對應校系</button>
+  <button onclick="showSection('學類體驗', event)">學類體驗</button>
+</div>
+
+<!--學類介紹-->
+<div id="學類介紹" class="section">
+  <div class="content-wrapper"><!--content wrapper 開始-->
+    <div class="bg-light py-5">
+      <h1 class="text-center my-0" style="font-size: 3em;">醫學 學類</h1>
+      <p class="text-center">醫藥衛生學群</p>
+      <div class="box">
+        <h2 class="text-center"><strong>這個學類學什麼？</strong></h2>
+        <p class="text-center">
+          醫學學類為診斷、治療和預防生心理疾病和提高人體健康為目的的應用科學，包含中醫與西醫，可分為臨床學科及基礎學科，主要以培養臨床醫師為目的，同時培養醫學領域相關研究及發展、提升整體人類健康之人才。<br>
+          醫學學類的學習領域涵蓋基礎醫學如生理學、藥理學、生物化學、微生物及免疫學、解剖學、組織學、胚胎學、細胞生物學、遺傳學。臨床醫學；公共衛生學；基礎科學如物理學、生物學、微積分、普通化學、有機化學；醫學人文、倫理與醫事法。<br>
+          如果你學習醫學學類，你可以學到人體結構、生理運作、疾病、治療方式，學習人文關懷、生命之始末，獨立思考、組織決策、倫理判斷及臨床人際溝通技巧，學習如何運用自身醫學知識成為一名醫者。
+        </p>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2 class="text-center">相似學類比一比</h2>
+      <p class="text-center">
+        本學類主要學習基礎醫學與臨床醫學知識，並實習臨床醫療技能。<br>
+        本學類容易與護理學類以及健康照護學類混淆。<br>
+        護理學類與健康照護學類：皆是以培育護理師及護理人員為目標。<br>
+        都是以培育醫事相關人才為目標。
+      </p>
+    </div>
+
+    <div class="bg-light py-5">
+      <div class="box">
+        <h2 class="text-center">就要你這款</h2>
+        <p class="text-center">
+          就要你具有對抗疾病、傷害的熱情，協助人們治癒疾病和預防疾病的願望將是你強大的動機。<br>
+          如果你喜歡深入思考、願意突破現狀、具有嚴謹的實驗思維與操作能力、系統地做事情，並願意接受挑戰，你將會很適合醫學學類。<br>
+          在醫學的路上將會有許多挫折及無法掌握的變化，除了聰明的腦袋外，也需具備彈性、耐挫力、團隊合作與尊重他人的能力。
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-light py-5">
+      <div class="box">
+        <h2 class="text-center">你所不知道的大學生活</h2>
+        <ul>
+          <li>✅ 要有一定程度的英文閱讀能力</li>
+          <li>✅ 背誦繁雜的醫學知識以及名詞，臨床實習活用它</li>
+          <li>✅ 全方位進修，包括數學、英文、物理、化學、生物及研究方法</li>
+          <li>✅ 在醫院或其他醫療機構實習</li>
+          <li>✅ 在學表現不一定等於臨床表現，但會影響專科選擇</li>
+        </ul>
+      </div>
+    </div>
+
+      <h1 class="text-center">興趣類型</h1>
+      <div class="container my-4">
+        <div class="row justify-content-center">
+          <div class="col-auto"><div class="box">身心保健 (IS)</div></div>
+          <div class="col-auto"><div class="box">科技研發 (IR)</div></div>
+          <div class="col-auto"><div class="box">健康促進 (SR)</div></div>
+        </div>
+      </div>
+
+      <h1 class="text-center">不可不知的知識領域</h1>
+      <div class="container my-4">
+        <div class="row justify-content-center">
+          <div class="col-auto"><div class="box">醫學</div></div>
+          <div class="col-auto"><div class="box">生命科學</div></div>
+          <div class="col-auto"><div class="box">治療諮商</div></div>
+          <div class="col-auto"><div class="box">化學</div></div>
+          <div class="col-auto"><div class="box">心理學</div></div>
+        </div>
+      </div>
+
+    <div class="box">
+      <h2 class="text-center">必修或核心課程？</h2>
+      <ul>
+        <li>✅ <b>基礎醫學</b>：寄生蟲學、微生物學、免疫學、生理學、大體解剖學、組織學、胚胎學、神經解剖學、病理學、藥理學、檢驗醫學、公共衛生</li>
+        <li>✅ <b>臨床醫學</b>：內科學、外科學、檢驗醫學、病理學、腫瘤醫學、環境職業醫學、急診醫學、麻醉科學、眼科、耳鼻喉科、皮膚科、泌尿科、放射線科、精神科、小兒科、社區醫學等臨床實習</li>
+        <li>✅ <b>醫學人文與倫理</b>：生命倫理學、醫事法律、醫療與社會、進階公共衛生議題</li>
+        <li>✅ <b>公共衛生學</b>：衛生政策與健康保險、生物統計與流行病學</li>
+      </ul>
+    </div>
+
+    <div class="box my-5">
+  <h2 class="text-center mb-4">有哪些可能的誤解？</h2>
+  <div class="row justify-content-center g-4">
+
+    <div class="col-md-5">
+      <div class="card shadow-sm border-danger">
+        <div class="card-body">
+          <h5 class="card-title text-danger">誤解</h5>
+          <p class="card-text">臨床討論課只需靠查資料累積知識！？</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="card shadow-sm border-success">
+        <div class="card-body">
+          <h5 class="card-title text-success">事實</h5>
+          <p class="card-text">課程也會教導自我學習、臨床技能、解決問題能力、批判思考與自我評估。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div class="card shadow-sm border-danger">
+        <div class="card-body">
+          <h5 class="card-title text-danger">誤解</h5>
+          <p class="card-text">只能當醫生！？</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="card shadow-sm border-success">
+        <div class="card-body">
+          <h5 class="card-title text-success">事實</h5>
+          <p class="card-text">也可擔任教職培育英才，或從事公衛、流行病預防研究、醫療社會學、司法醫學等領域的研究工作。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p class="text-center">學類內之各系選才指標仍有差異，若想了解特定科系資料，請點選至【對應校系】頁面進一步查詢。</p>
+
+
+  
+</div><!--content wrapper 結束-->
+</div><!--學類介紹結束-->
+
+<!--生涯進路-->
+<div id="生涯進路" class="section">
+  <div class="content-wrapper"><!--content wrapper 開始-->
+    <h1>適合從事的工作</h1>
+      <div class="container my-4">
+        <div class="row justify-content-center">
+          <div class="col-auto"><div class="box">醫學工程師</div></div>
+          <div class="col-auto"><div class="box">公共衛生人員</div></div>
+          <div class="col-auto"><div class="box">教授／副教授／助理教授</div></div>
+          <div class="col-auto"><div class="box">講師</div></div>
+          <div class="col-auto"><div class="box">醫師</div></div>
+          <div class="col-auto"><div class="box">中醫師</div></div>
+          <div class="col-auto"><div class="box">其他醫院從業人員</div></div>
+        </div>
+      </div>
+  </div><!--content wrapper 結束-->
+</div>
+<!--生涯進路結束-->
+
+<!--高中準備-->
+<div id="高中準備" class="section">
+  <div class="content-wrapper"><!--content wrapper 開始-->
+    <div class="chart-container">
+
+ <h2>核心素養</h2>
+  <div class="bar-chart">
+    <div class="bar"><span class="label">身心素質與自我精進</span><div class="progress" style="width: 178.9px;"></div><span class="percent">17.89%</span></div>
+    <div class="bar"><span class="label">人際關係與團隊合作</span><div class="progress" style="width: 173.7px;"></div><span class="percent">17.37%</span></div>
+    <div class="bar"><span class="label">系統思考與解決問題</span><div class="progress" style="width: 163.2px;"></div><span class="percent">16.32%</span></div>
+    <div class="bar"><span class="label">規劃執行與創新應變</span><div class="progress" style="width: 121.1px;"></div><span class="percent">12.11%</span></div>
+    <div class="bar"><span class="label">道德實踐與公民意識</span><div class="progress" style="width: 115.8px;"></div><span class="percent">11.58%</span></div>
+    <div class="bar"><span class="label">符號運用與溝通表達</span><div class="progress" style="width: 113.2px;"></div><span class="percent">11.32%</span></div>
+    <div class="bar"><span class="label">多元文化與國際理解</span><div class="progress" style="width: 71.1px;"></div><span class="percent">7.11%</span></div>
+    <div class="bar"><span class="label">科技資訊與媒體素養</span><div class="progress" style="width: 36.8px;"></div><span class="percent">3.68%</span></div>
+    <div class="bar"><span class="label">藝術涵養與美感素養</span><div class="progress" style="width: 26.3px;"></div><span class="percent">2.63%</span></div>
+  </div>
+
+  <h2>高中課程領域</h2>
+  <div class="bar-chart">
+    <div class="bar"><span class="label">生物</span><div class="progress" style="width: 150px;"></div><span class="percent">15.00%</span></div>
+    <div class="bar"><span class="label">英語文</span><div class="progress" style="width: 131.6px;"></div><span class="percent">13.16%</span></div>
+    <div class="bar"><span class="label">化學</span><div class="progress" style="width: 118.4px;"></div><span class="percent">11.84%</span></div>
+    <div class="bar"><span class="label">數學</span><div class="progress" style="width: 102.6px;"></div><span class="percent">10.26%</span></div>
+    <div class="bar"><span class="label">國語文</span><div class="progress" style="width: 86.8px;"></div><span class="percent">8.68%</span></div>
+    <div class="bar"><span class="label">物理</span><div class="progress" style="width: 81.6px;"></div><span class="percent">8.16%</span></div>
+    <div class="bar"><span class="label">生命教育</span><div class="progress" style="width: 63.2px;"></div><span class="percent">6.32%</span></div>
+    <div class="bar"><span class="label">健康與護理</span><div class="progress" style="width: 44.7px;"></div><span class="percent">4.47%</span></div>
+    <div class="bar"><span class="label">公民與社會</span><div class="progress" style="width: 34.2px;"></div><span class="percent">3.42%</span></div>
+    <div class="bar"><span class="label">資訊科技</span><div class="progress" style="width: 31.6px;"></div><span class="percent">3.16%</span></div>
+  </div>
+
+   <h2>加深加廣課程</h2>
+  <div class="bar-chart">
+    <div class="bar"><span class="label">語文表達與傳播應用</span><div class="progress" style="width: 165.8px;"></div><span class="percent">16.58%</span></div>
+    <div class="bar"><span class="label">細胞與遺傳</span><div class="progress" style="width: 89.5px;"></div><span class="percent">8.95%</span></div>
+    <div class="bar"><span class="label">英文閱讀與寫作</span><div class="progress" style="width: 84.2px;"></div><span class="percent">8.42%</span></div>
+    <div class="bar"><span class="label">動物體的構造與功能</span><div class="progress" style="width: 71.1px;"></div><span class="percent">7.11%</span></div>
+    <div class="bar"><span class="label">數學甲</span><div class="progress" style="width: 65.8px;"></div><span class="percent">6.58%</span></div>
+    <div class="bar"><span class="label">有機化學與應用科技</span><div class="progress" style="width: 55.3px;"></div><span class="percent">5.53%</span></div>
+    <div class="bar"><span class="label">生態、演化及生物多樣性</span><div class="progress" style="width: 44.7px;"></div><span class="percent">4.47%</span></div>
+    <div class="bar"><span class="label">英語聽講</span><div class="progress" style="width: 44.7px;"></div><span class="percent">4.47%</span></div>
+    <div class="bar"><span class="label">物質與能量</span><div class="progress" style="width: 28.9px;"></div><span class="percent">2.89%</span></div>
+    <div class="bar"><span class="label">生命的起源與植物體的構造與功能</span><div class="progress" style="width: 28.9px;"></div><span class="percent">2.89%</span></div>
+    <div class="bar"><span class="label">力學二與熱學</span><div class="progress" style="width: 28.9px;"></div><span class="percent">2.89%</span></div>
+    <div class="bar"><span class="label">波動、光與聲音</span><div class="progress" style="width: 26.3px;"></div><span class="percent">2.63%</span></div>
+    <div class="bar"><span class="label">力學一</span><div class="progress" style="width: 23.7px;"></div><span class="percent">2.37%</span></div>
+    <div class="bar"><span class="label">專題閱讀與研究</span><div class="progress" style="width: 23.7px;"></div><span class="percent">2.37%</span></div>
+    <div class="bar"><span class="label">電磁現象一</span><div class="progress" style="width: 21.1px;"></div><span class="percent">2.11%</span></div>
+    <div class="bar"><span class="label">化學反應與平衡一</span><div class="progress" style="width: 21.1px;"></div><span class="percent">2.11%</span></div>
+    <div class="bar"><span class="label">化學反應與平衡二</span><div class="progress" style="width: 21.1px;"></div><span class="percent">2.11%</span></div>
+    <div class="bar"><span class="label">思考：智慧的啟航</span><div class="progress" style="width: 18.4px;"></div><span class="percent">1.84%</span></div>
+    <div class="bar"><span class="label">國學常識</span><div class="progress" style="width: 13.2px;"></div><span class="percent">1.32%</span></div>
+    <div class="bar"><span class="label">英文作文</span><div class="progress" style="width: 13.2px;"></div><span class="percent">1.32%</span></div>
+    <div class="bar"><span class="label">物質構造與反應速率</span><div class="progress" style="width: 13.2px;"></div><span class="percent">1.32%</span></div>
+    <div class="bar"><span class="label">閩南語文口語溝通與表達</span><div class="progress" style="width: 13.2px;"></div><span class="percent">1.32%</span></div>
+    <div class="bar"><span class="label">現代社會與經濟</span><div class="progress" style="width: 13.2px;"></div><span class="percent">1.32%</span></div>
+    <div class="bar"><span class="label">探究與實作：公共議題與社會探究</span><div class="progress" style="width: 10.5px;"></div><span class="percent">1.05%</span></div>
+    <div class="bar"><span class="label">各類文學選讀</span><div class="progress" style="width: 10.5px;"></div><span class="percent">1.05%</span></div>
+    <div class="bar"><span class="label">地質與環境</span><div class="progress" style="width: 10.5px;"></div><span class="percent">1.05%</span></div>
+    <div class="bar"><span class="label">未來想像與生涯進路</span><div class="progress" style="width: 7.9px;"></div><span class="percent">0.79%</span></div>
+    <div class="bar"><span class="label">族群、性別與國家的歷史</span><div class="progress" style="width: 7.9px;"></div><span class="percent">0.79%</span></div>
+    <div class="bar"><span class="label">進階程式設計</span><div class="progress" style="width: 5.3px;"></div><span class="percent">0.53%</span></div>
+    <div class="bar"><span class="label">運動與健康</span><div class="progress" style="width: 5.3px;"></div><span class="percent">0.53%</span></div>
+    <div class="bar"><span class="label">工程設計專題</span><div class="progress" style="width: 2.6px;"></div><span class="percent">0.26%</span></div>
+    <div class="bar"><span class="label">科技應用專題</span><div class="progress" style="width: 2.6px;"></div><span class="percent">0.26%</span></div>
+    <div class="bar"><span class="label">安全教育與傷害防護</span><div class="progress" style="width: 2.6px;"></div><span class="percent">0.26%</span></div>
+    <div class="bar"><span class="label">空間資訊科技</span><div class="progress" style="width: 2.6px;"></div><span class="percent">0.26%</span></div>
+    <div class="bar"><span class="label">電磁現象二與量子現象</span><div class="progress" style="width: 2.6px;"></div><span class="percent">0.26%</span></div>
+  </div>
+
+    </div>
+  </div><!--content wrapper 結束-->
+</div>
+<!--高中準備結束-->
+
+<!--能力特質-->
+<div id="能力特質" class="section">
+  <div class="content-wrapper">
+    <div class="chart-container">
+      <h2>多元能力</h2>
+      <div class="bar-chart">
+        <!-- 多元能力 -->
+        <div class="bar"><span class="label">邏輯推理</span><div class="progress" style="width: 81.6px;"></div><span class="percent">8.16%</span></div>
+        <div class="bar"><span class="label">主動學習</span><div class="progress" style="width: 76.3px;"></div><span class="percent">7.63%</span></div>
+        <div class="bar"><span class="label">語文理解與表達</span><div class="progress" style="width: 71.1px;"></div><span class="percent">7.11%</span></div>
+        <div class="bar"><span class="label">自省促進</span><div class="progress" style="width: 68.4px;"></div><span class="percent">6.84%</span></div>
+        <div class="bar"><span class="label">社會覺察與合作</span><div class="progress" style="width: 68.4px;"></div><span class="percent">6.84%</span></div>
+        <div class="bar"><span class="label">問題解決</span><div class="progress" style="width: 68.4px;"></div><span class="percent">6.84%</span></div>
+        <div class="bar"><span class="label">批判思考</span><div class="progress" style="width: 63.2px;"></div><span class="percent">6.32%</span></div>
+        <div class="bar"><span class="label">快速知覺與總結</span><div class="progress" style="width: 57.9px;"></div><span class="percent">5.79%</span></div>
+        <div class="bar"><span class="label">專注力</span><div class="progress" style="width: 55.3px;"></div><span class="percent">5.53%</span></div>
+        <div class="bar"><span class="label">數理科學</span><div class="progress" style="width: 55.3px;"></div><span class="percent">5.53%</span></div>
+        <div class="bar"><span class="label">敏銳創造</span><div class="progress" style="width: 50.0px;"></div><span class="percent">5.00%</span></div>
+        <div class="bar"><span class="label">記憶詮釋</span><div class="progress" style="width: 42.1px;"></div><span class="percent">4.21%</span></div>
+        <div class="bar"><span class="label">同時多工</span><div class="progress" style="width: 39.5px;"></div><span class="percent">3.95%</span></div>
+        <div class="bar"><span class="label">說服協商</span><div class="progress" style="width: 36.8px;"></div><span class="percent">3.68%</span></div>
+        <div class="bar"><span class="label">遠觀細察</span><div class="progress" style="width: 26.3px;"></div><span class="percent">2.63%</span></div>
+        <div class="bar"><span class="label">聽覺辨識</span><div class="progress" style="width: 26.3px;"></div><span class="percent">2.63%</span></div>
+        <div class="bar"><span class="label">手工操作</span><div class="progress" style="width: 26.3px;"></div><span class="percent">2.63%</span></div>
+        <div class="bar"><span class="label">空間定向</span><div class="progress" style="width: 26.3px;"></div><span class="percent">2.63%</span></div>
+        <div class="bar"><span class="label">運作分析</span><div class="progress" style="width: 21.1px;"></div><span class="percent">2.11%</span></div>
+        <div class="bar"><span class="label">程式設計</span><div class="progress" style="width: 13.2px;"></div><span class="percent">1.32%</span></div>
+        <div class="bar"><span class="label">資源管理</span><div class="progress" style="width: 10.5px;"></div><span class="percent">1.05%</span></div>
+        <div class="bar"><span class="label">肢體力量與協調</span><div class="progress" style="width: 10.5px;"></div><span class="percent">1.05%</span></div>
+        <div class="bar"><span class="label">機械操作</span><div class="progress" style="width: 2.6px;"></div><span class="percent">0.26%</span></div>
+        <div class="bar"><span class="label">系統運作</span><div class="progress" style="width: 2.6px;"></div><span class="percent">0.26%</span></div>
+      </div>
+
+      <h2>性格特質</h2>
+      <div class="bar-chart">
+        <!-- 性格特質 -->
+        <div class="bar"><span class="label">主動積極</span><div class="progress" style="width: 147.4px;"></div><span class="percent">14.74%</span></div>
+        <div class="bar"><span class="label">自信肯定</span><div class="progress" style="width: 142.1px;"></div><span class="percent">14.21%</span></div>
+        <div class="bar"><span class="label">堅毅負責</span><div class="progress" style="width: 131.6px;"></div><span class="percent">13.16%</span></div>
+        <div class="bar"><span class="label">親和接納</span><div class="progress" style="width: 115.8px;"></div><span class="percent">11.58%</span></div>
+        <div class="bar"><span class="label">合作互助</span><div class="progress" style="width: 102.6px;"></div><span class="percent">10.26%</span></div>
+        <div class="bar"><span class="label">樂群敬業</span><div class="progress" style="width: 92.1px;"></div><span class="percent">9.21%</span></div>
+        <div class="bar"><span class="label">探究冒險</span><div class="progress" style="width: 92.1px;"></div><span class="percent">9.21%</span></div>
+        <div class="bar"><span class="label">變通開創</span><div class="progress" style="width: 68.4px;"></div><span class="percent">6.84%</span></div>
+        <div class="bar"><span class="label">深思力行</span><div class="progress" style="width: 55.3px;"></div><span class="percent">5.53%</span></div>
+        <div class="bar"><span class="label">開朗活潑</span><div class="progress" style="width: 52.6px;"></div><span class="percent">5.26%</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--能力特質結束-->
+
+<!--對應校系-->
+<div id="對應校系" class="section">
+  <div class="content-wrapper">
+    <div class="container">
+    <h1>醫學系比較清單</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>學校</th>
+          <th>系組名稱</th>
+          <th>比較清單</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>國立臺灣大學</td><td>醫學系</td><td>加入比較</td></tr>
+        <tr><td>國立成功大學</td><td>醫學系</td><td>加入比較</td></tr>
+        <tr><td>高雄醫學大學</td><td>醫學系</td><td>加入比較</td></tr>
+        <tr><td>中國醫藥大學</td><td>醫學系</td><td>加入比較</td></tr>
+        <tr><td>中國醫藥大學</td><td>中醫學系甲組</td><td>加入比較</td></tr>
+        <tr><td>中國醫藥大學</td><td>中醫學系乙組</td><td>加入比較</td></tr>
+        <tr><td>國立陽明交通大學</td><td>醫學系醫師組</td><td>加入比較</td></tr>
+        <tr><td>國立陽明交通大學</td><td>醫學系醫師科學家組</td><td>加入比較</td></tr>
+        <tr><td>國立陽明交通大學</td><td>醫學系醫師工程師組</td><td>加入比較</td></tr>
+        <tr><td>國立陽明交通大學</td><td>中醫學系</td><td>加入比較</td></tr>
+        <tr><td>輔仁大學</td><td>醫學系</td><td>加入比較</td></tr>
+        <tr><td>輔仁大學</td><td>醫學系(公費)</td><td>加入比較</td></tr>
+        <tr><td>中山醫學大學</td><td>醫學系</td><td>加入比較</td></tr>
+        <tr><td>長庚大學</td><td>醫學系</td><td>加入比較</td></tr>
+        <tr><td>長庚大學</td><td>中醫學系</td><td>加入比較</td></tr>
+        <tr><td>義守大學</td><td>醫學系（公費生）</td><td>加入比較</td></tr>
+        <tr><td>慈濟大學</td><td>醫學系</td><td>加入比較</td></tr>
+        <tr><td>臺北醫學大學</td><td>醫學系</td><td>加入比較</td></tr>
+        <tr><td>馬偕醫學院</td><td>醫學系</td><td>加入比較</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+</div>
+<!--對應校系結束-->
+
+<!--學類體驗-->
+<div id="學類體驗" class="section">
+  <div class="content-wrapper">
+    <p>這個學類會不會是你很棒的選擇呢？投入體驗與這個學類有關的活動，會讓你更了解這個學類是否適合你喔！這是一種從做中學(Learning by doing)的體驗活動，你可以選擇自己有興趣的活動去體驗， 再想想看這些體驗活動會帶給你什麼心得與想法呢？</p>
+      <div class="box">
+        <h2>加強英語能力</h2>
+        <p>未來教科書以及臨床皆須使用英語，除高中英文字彙及文法之熟稔外，平時多閱讀英語雜誌、新聞報導，熟悉複雜子句文法，若有機會參與英語口說相關訓練或活動，多參與，訓練口語表達能力。</p>
+      </div>
+      <div class="box">
+        <h2>提升數學、科學基礎能力</h2>
+        <p>高中三年之基礎科學能力應扎實訓練，尤其數學統計、有機化學、生物基本知識，高三微積分不能放掉，對大學課程和未來研究將有幫助。</p>
+      </div>
+      <div class="box">
+        <h2>了解他人內在需求</h2>
+        <p>醫病、護病關係是這個領域相當重視的議題之一，生病者或是失能者，需要更多細膩觀察，才為他們帶來更合適的治療方案或是照護，不要拘泥在自己的世界裡！多與不同人互動，能夠了解他人的內在需求。並留一點時間認識自己。你也可以閱讀基本哲學及心理學之概論或相關書籍。整理出自我觀察或觀察他人的描述，協助自己更好的覺察他人需求。</p>
+      </div>
+      <div class="box">
+        <h2>參與演講、練習與他人對談</h2>
+        <p>能加強語言表達能力：不要錯過任何上台演講或與課堂上與他人討論的機會！除了部分科別，大多數醫師是需要不斷的與人溝通。可能的話，多與同學討論複雜的議題，練習思辨以及表達概念的能力。</p>
+      </div>
+      <div class="box">
+        <h2>大量閱讀，練習於龐雜資訊抓取重點的能力</h2>
+        <p>喜歡什麼課外讀物就多讀吧！國內外文學、科普讀物、商業相關書籍都可以，練習不看懶人包或重點整理，自己蒐集第一手資訊或在書籍中找尋正確答案！</p>
+      </div>
+      <div class="box">
+        <h2>培養自己的抗壓行為</h2>
+        <p>緊湊時間、危急關頭、繁雜的知識體系，是醫學學類的學生會面臨的情境，觀察自己在這些時刻的抗壓行為，鼓勵自己能夠保持清醒的思維以及嚴謹的行動程序，如果有幸能有自己喜歡的嗜好，請好好享受它，這可能是陪伴你一輩子重要的抒壓管道喔！</p>
+      </div>
+      <div class="box">
+        <h2>訪問醫學生或醫師，實際了解其各階段生活</h2>
+        <p>若身邊有親戚朋友可以詢問、已畢業之學長姊，聽聽各階段的醫學生、醫師都在做什麼，碰到的問題是什麼，生活怎麼過，評估自己是不是適合或喜歡！</p>
+      </div>
+
+      <div class="container my-4">
+        <div class="row justify-content-center">
+          <div class="col-auto"><div class="box">進一步規劃學類體驗</div></div>
+        </div>
+      </div>
+  </div>
+</div>
+<!--學類體驗結束-->
+
+
+<script>/*section script*/
+  function showSection(id, event) {
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+      section.style.display = 'none';
+    });
+
+    const buttons = document.querySelectorAll('.menu button');
+    buttons.forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    const targetSection = document.getElementById(id);
+    if (targetSection) {
+      targetSection.style.display = 'block';
+    }
+
+    if (event) {
+      event.target.classList.add('active');
+    }
+  }
+
+  window.onload = function () {
+    showSection('學類介紹');
+  };
+</script>
+
+<!-- 頁尾 -->
+  <footer class="bg-success text-white py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-1">聯絡資訊：0900388946 ｜ curry950814@gmail.com</p>
+      <p class="mb-1">地址：萬華區貴陽街二段96巷 3-2號</p>
+      <p class="mb-1">第19組製作</p>
+      <p class="mb-0">© 2025 醫藥衛生學群</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
