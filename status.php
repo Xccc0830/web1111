@@ -1,18 +1,18 @@
 <?php
 session_start();
-
 if (!isset($_SESSION["user"])) {
   $_SESSION["redirect_to"] = $_SERVER["REQUEST_URI"];
   header("Location: login.php");
   exit;
 }
-
 include("header.php");
 ?>
 
 <h3>迎新茶會報名</h3>
 
 <form method="post" action="success.php">
+  <input type="hidden" name="eventid" value="2"> <!-- 活動 ID -->
+
   <p>姓名：<?= htmlspecialchars($_SESSION["user"]["name"]) ?></p>
   <p>身分：<?= $_SESSION["user"]["role"] == "teacher" ? "老師" : "學生" ?></p>
 

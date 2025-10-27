@@ -22,7 +22,7 @@ if (!$result) {
   <!-- 管理員新增職缺按鈕 -->
   <?php if (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] === 'M'): ?>
     <div class="mb-3">
-      <a href="job_add.php" class="btn btn-success">➕ 新增職缺</a>
+      <a href="job_add.php" class="btn btn-success">新增職缺</a>
     </div>
   <?php endif; ?>
 
