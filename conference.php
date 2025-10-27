@@ -1,9 +1,9 @@
 <?php
 session_start();
 if (!isset($_SESSION["user"])) {
-  $_SESSION["redirect_to"] = $_SERVER["REQUEST_URI"];
-  header("Location: login.php");
-  exit;
+    $_SESSION["redirect_to"] = $_SERVER["REQUEST_URI"];
+    header("Location: login.php");
+    exit;
 }
 include("header.php");
 ?>
@@ -11,10 +11,31 @@ include("header.php");
 <h3>資管一日營報名</h3>
 
 <form method="post" action="success.php">
-  <input type="hidden" name="eventid" value="1"> <!-- 活動 ID -->
-  
+  <?php
+    // 從資料庫抓取資管一日營活動 ID（動態抓最新的活動）
+    include("db.php");
+    $eventid = 0;
+    $sql = "SELECT id FROM event WHERE name='資管一日營' ORDER BY id DESC LIMIT 1";
+    $res = $conn->query($sql);
+    if ($res && $res->num_rows > 0) {
+        $row = $res->fetch_assoc();
+        $eventid = $row['id'];
+    }
+    $conn->close();
+  ?>
+  <input type="hidden" name="eventid" value="<?= $eventid ?>">
+
   <p>姓名：<?= htmlspecialchars($_SESSION["user"]["name"]) ?></p>
-  <p>身分：<?= $_SESSION["user"]["role"] == "teacher" ? "老師" : "學生" ?></p>
+  <p>身分：
+      <?php
+        switch($_SESSION["user"]["role"]) {
+            case "S": echo "學生"; break;
+            case "T": echo "老師"; break;
+            case "M": echo "管理員"; break;
+            default: echo "未知"; break;
+        }
+      ?>
+  </p>
 
   <div class="mb-3">
     <label class="form-label">選擇時段：</label><br>

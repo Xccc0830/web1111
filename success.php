@@ -4,6 +4,7 @@ if (!isset($_SESSION["user"])) {
     header("Location: login.php");
     exit;
 }
+
 include("header.php");
 include("db.php");
 
@@ -13,10 +14,17 @@ $fee = 0;
 $activity = "";
 $detail = "";
 $msg = "";
-
 $eventid = 0;
 
-// 如果是取消報名
+// 取得角色名稱
+switch($role){
+    case "S": $role_name = "學生"; break;
+    case "T": $role_name = "老師"; break;
+    case "M": $role_name = "管理員"; break;
+    default: $role_name = "未知"; break;
+}
+
+// 取消報名
 if (isset($_GET['cancel']) && is_numeric($_GET['cancel'])) {
     $eventid = (int)$_GET['cancel'];
     $sql_delete = "DELETE FROM registration WHERE userid=? AND eventid=?";
@@ -31,20 +39,19 @@ if (isset($_GET['cancel']) && is_numeric($_GET['cancel'])) {
     mysqli_stmt_close($stmt_delete);
 }
 
-// 如果有 POST 表單
+// 新增報名
 if (!empty($_POST)) {
-
     if (isset($_POST["dinner"])) {
         $activity = "迎新茶會";
         $detail = "晚餐：" . $_POST["dinner"];
-        $eventid = 1; // 迎新茶會的活動 ID
-        if ($role == "S" && $_POST["dinner"] == "需要") $fee = 60;
+        $eventid = 1; // 迎新茶會活動 ID
+        if ($role === "S" && $_POST["dinner"] === "需要") $fee = 60;
     } elseif (isset($_POST["session"])) {
         $activity = "資管一日營";
         $sessions = $_POST["session"];
         $detail = "場次：" . implode("、", $sessions);
-        $eventid = 2; // 資管一日營的活動 ID
-        if ($role == "S") {
+        $eventid = 2; // 資管一日營活動 ID
+        if ($role === "S") {
             foreach ($sessions as $s) {
                 switch ($s) {
                     case "上午": $fee += 150; break;
@@ -85,14 +92,14 @@ if (!empty($_POST)) {
 echo "<h3>報名資訊</h3>";
 echo "<ul>";
 echo "<li>姓名：" . htmlspecialchars($_SESSION["user"]["name"]) . "</li>";
-echo "<li>身分：" . ($role == "T" ? "老師" : "學生") . "</li>";
+echo "<li>身分：" . $role_name . "</li>";
 
 if (!empty($activity)) {
     echo "<li>活動名稱：{$activity}</li>";
     echo "<li>{$detail}</li>";
     echo "<li>應繳費用：{$fee} 元</li>";
 
-    // 檢查是否已報名
+    // 顯示取消報名按鈕
     $sql_check2 = "SELECT * FROM registration WHERE userid=? AND eventid=?";
     $stmt_check2 = mysqli_stmt_init($conn);
     mysqli_stmt_prepare($stmt_check2, $sql_check2);
@@ -109,6 +116,7 @@ if (!empty($activity)) {
 
 echo "</ul>";
 echo $msg;
+
 mysqli_close($conn);
 ?>
 
