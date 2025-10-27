@@ -14,11 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($result && $result->num_rows > 0) {
         $row = $result->fetch_assoc();
 
+        // 這裡假設密碼仍是明文
         if ($row['password'] === $password) {
             $_SESSION['user'] = [
                 'account' => $row['account'],
                 'name' => $row['name'],
-                'role' => ($row['role'] === 'T') ? 'teacher' : 'student'
+                'role' => $row['role']  // ✅ 正確保留 S, T, M
             ];
             header("Location: index.php");
             exit;
