@@ -3,11 +3,11 @@ session_start();
 include("db.php");
 include("header.php");
 
-$order = $_POST["order"] ?? ""; // 取得使用者選擇的排序欄位
+$order = $_POST["order"] ?? ""; 
 $sql = "SELECT * FROM job";
 
 if ($order && in_array($order, ['company', 'content', 'pdate'])) {
-    $sql .= " ORDER BY $order"; // 根據選擇的欄位排序
+    $sql .= " ORDER BY $order"; 
 }
 
 $result = mysqli_query($conn, $sql);
@@ -19,14 +19,12 @@ if (!$result) {
 <div class="container mt-4">
   <h3 class="mb-3">職缺列表</h3>
 
-  <!-- 管理員新增職缺按鈕 -->
   <?php if (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] === 'M'): ?>
     <div class="mb-3">
       <a href="job_add.php" class="btn btn-success">新增職缺</a>
     </div>
   <?php endif; ?>
 
-  <!-- 排序表單 -->
   <form action="job.php" method="post" class="mb-3">
     <select name="order" class="form-select w-auto d-inline-block" aria-label="選擇排序欄位">
       <option value="" <?= ($order == '') ? 'selected' : '' ?>>選擇排序欄位</option>
@@ -37,9 +35,8 @@ if (!$result) {
     <input class="btn btn-primary ms-2" type="submit" value="排序">
   </form>
 
-  <!-- 職缺表格 -->
-  <table class="table table-bordered table-striped">
-    <thead>
+  <table class="table table-bordered table-striped align-middle">
+    <thead class="table-light">
       <tr>
         <th>ID</th>
         <th>公司</th>
@@ -59,6 +56,8 @@ if (!$result) {
           <td><?= htmlspecialchars($row["pdate"]) ?></td>
           <?php if (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] === 'M'): ?>
             <td>
+
+              <a href="job_edit.php?postid=<?= $row['postid'] ?>" class="btn btn-warning btn-sm me-1">修改</a>
               <a href="job_delete.php?id=<?= $row['postid'] ?>" class="btn btn-danger btn-sm"
                  onclick="return confirm('確定要刪除這個職缺嗎？');">刪除</a>
             </td>

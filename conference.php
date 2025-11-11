@@ -12,7 +12,6 @@ include("header.php");
 
 <form method="post" action="success.php">
   <?php
-    // 從資料庫抓取資管一日營活動 ID（動態抓最新的活動）
     include("db.php");
     $eventid = 0;
     $sql = "SELECT id FROM event WHERE name='資管一日營' ORDER BY id DESC LIMIT 1";

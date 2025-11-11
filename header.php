@@ -10,7 +10,6 @@ if (session_status() === PHP_SESSION_NONE) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>活動報名系統</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
@@ -22,7 +21,8 @@ if (session_status() === PHP_SESSION_NONE) {
   </div>
   <div class="ms-auto">
     <?php if (isset($_SESSION["user"])): ?>
-      <span class="me-3">歡迎，<?= $_SESSION["user"]["name"] ?>！</span>
+      <span class="me-3">歡迎，<?= htmlspecialchars($_SESSION["user"]["name"]) ?>！</span>
+      <a href="profile_edit.php" class="btn btn-outline-primary btn-sm me-2">修改個人資料</a>
       <a href="logout.php" class="btn btn-outline-danger btn-sm">登出</a>
     <?php else: ?>
       <a href="login.php" class="btn btn-outline-primary btn-sm">登入</a>
