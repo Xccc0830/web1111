@@ -1,7 +1,10 @@
 <?php
-$title = "報名記錄";
-include('check_login.php');
-include('header.php');
+session_start();
+if (!isset($_SESSION['user'])) {
+    header("Location: login.php"); // 沒登入就導向登入頁
+    exit;
+}
+
 
 if (session_status() === PHP_SESSION_NONE) session_start();
 $account = $_SESSION["account"] ?? "";

@@ -23,6 +23,8 @@ if (session_status() === PHP_SESSION_NONE) {
     <?php if (isset($_SESSION["user"])): ?>
       <span class="me-3">歡迎，<?= htmlspecialchars($_SESSION["user"]["name"]) ?>！</span>
       <a href="profile_edit.php" class="btn btn-outline-primary btn-sm me-2">修改個人資料</a>
+      <!-- 新增報名紀錄按鈕 -->
+      <a href="registration_history.php" class="btn btn-outline-success btn-sm me-2">我的報名紀錄</a>
       <a href="logout.php" class="btn btn-outline-danger btn-sm">登出</a>
     <?php else: ?>
       <a href="login.php" class="btn btn-outline-primary btn-sm">登入</a>
