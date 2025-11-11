@@ -3,6 +3,9 @@ session_start();
 include("db.php");
 include("header.php");
 
+// 檢查使用者是否登入
+$is_logged_in = isset($_SESSION["user"]);
+
 // 讀取所有活動
 $sql = "SELECT * FROM event ORDER BY id DESC";
 $result = $conn->query($sql);
@@ -14,7 +17,7 @@ if (!$result) {
 <h3>首頁活動資訊</h3>
 
 <!-- 管理員才顯示新增活動按鈕 -->
-<?php if (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] === 'M'): ?>
+<?php if ($is_logged_in && $_SESSION['user']['role'] === 'M'): ?>
   <div class="mb-3">
     <a href="/web/event_add.php" class="btn btn-success">➕ 新增活動</a>
   </div>
@@ -26,17 +29,26 @@ if (!$result) {
 <?php else: ?>
   <?php while ($row = $result->fetch_assoc()): ?>
     <div class="col-md-6">
-      <div class="card mb-3 border-primary shadow-sm">
-        <div class="card-body">
+      <div class="card mb-3 border-primary shadow-sm h-100">
+        <div class="card-body d-flex flex-column">
           <h5 class="card-title"><?= htmlspecialchars($row['name']) ?></h5>
           <p class="card-text"><?= htmlspecialchars($row['description']) ?></p>
 
-          <!-- 管理員才顯示編輯 & 刪除按鈕 -->
-          <?php if (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] === 'M'): ?>
-            <a href="/web/event_edit.php?eventid=<?= $row['id'] ?>" class="btn btn-warning btn-sm me-1">編輯活動</a>
-            <a href="/web/event_delete.php?id=<?= $row['id'] ?>" class="btn btn-danger btn-sm"
-               onclick="return confirm('確定要刪除這個活動嗎？');">刪除活動</a>
-          <?php endif; ?>
+          <div class="mt-auto text-end">
+            <!-- 一般使用者可以報名 -->
+            <?php if ($is_logged_in && $_SESSION['user']['role'] !== 'M'): ?>
+              <a href="register.php?event_id=<?= $row['id'] ?>" class="btn btn-success btn-sm me-2"
+                 onclick="return confirm('確定要報名這個活動嗎？')">報名</a>
+            <?php endif; ?>
+
+            <!-- 管理員才顯示編輯 & 刪除按鈕 -->
+            <?php if ($is_logged_in && $_SESSION['user']['role'] === 'M'): ?>
+              <a href="/web/event_edit.php?eventid=<?= $row['id'] ?>" class="btn btn-warning btn-sm me-1">編輯活動</a>
+              <a href="/web/event_delete.php?id=<?= $row['id'] ?>" class="btn btn-danger btn-sm"
+                 onclick="return confirm('確定要刪除這個活動嗎？');">刪除活動</a>
+            <?php endif; ?>
+          </div>
+
         </div>
       </div>
     </div>
@@ -44,4 +56,7 @@ if (!$result) {
 <?php endif; ?>
 </div>
 
-<?php include("footer.php"); ?>
+<?php
+$conn->close();
+include("footer.php");
+?>
