@@ -37,8 +37,10 @@ if (!$result) {
           <div class="mt-auto text-end">
             <!-- 一般使用者可以報名 -->
             <?php if ($is_logged_in && $_SESSION['user']['role'] !== 'M'): ?>
-              <a href="register.php?event_id=<?= $row['id'] ?>" class="btn btn-success btn-sm me-2"
-                 onclick="return confirm('確定要報名這個活動嗎？')">報名</a>
+              <form action="register.php" method="post" onsubmit="return confirm('確定要報名這個活動嗎？')">
+                <input type="hidden" name="event_id" value="<?= $row['id'] ?>">
+                <button type="submit" class="btn btn-success btn-sm me-2">報名</button>
+              </form>
             <?php endif; ?>
 
             <!-- 管理員才顯示編輯 & 刪除按鈕 -->

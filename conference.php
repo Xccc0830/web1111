@@ -6,22 +6,21 @@ if (!isset($_SESSION["user"])) {
     exit;
 }
 include("header.php");
+include("db.php");
+
+// 取得最新的資管一日營活動 ID
+$eventid = 0;
+$sql = "SELECT id FROM event WHERE name='資管一日營' ORDER BY id DESC LIMIT 1";
+$res = $conn->query($sql);
+if ($res && $res->num_rows > 0) {
+    $row = $res->fetch_assoc();
+    $eventid = $row['id'];
+}
+$conn->close();
 ?>
 
 <h3>資管一日營報名</h3>
-
 <form method="post" action="success.php">
-  <?php
-    include("db.php");
-    $eventid = 0;
-    $sql = "SELECT id FROM event WHERE name='資管一日營' ORDER BY id DESC LIMIT 1";
-    $res = $conn->query($sql);
-    if ($res && $res->num_rows > 0) {
-        $row = $res->fetch_assoc();
-        $eventid = $row['id'];
-    }
-    $conn->close();
-  ?>
   <input type="hidden" name="eventid" value="<?= $eventid ?>">
 
   <p>姓名：<?= htmlspecialchars($_SESSION["user"]["name"]) ?></p>
@@ -31,7 +30,6 @@ include("header.php");
             case "S": echo "學生"; break;
             case "T": echo "老師"; break;
             case "M": echo "管理員"; break;
-            default: echo "未知"; break;
         }
       ?>
   </p>

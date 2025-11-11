@@ -8,6 +8,7 @@ if (!isset($_SESSION["user"])) {
 include("header.php");
 include("db.php");
 
+// 取得最新的迎新茶會活動 ID
 $eventid = 0;
 $sql = "SELECT id FROM event WHERE name='迎新茶會' ORDER BY id DESC LIMIT 1";
 $res = $conn->query($sql);
@@ -19,9 +20,8 @@ $conn->close();
 ?>
 
 <h3>迎新茶會報名</h3>
-
 <form method="post" action="success.php">
-  <input type="hidden" name="eventid" value="<?= $eventid ?>"> 
+  <input type="hidden" name="eventid" value="<?= $eventid ?>">
 
   <p>姓名：<?= htmlspecialchars($_SESSION["user"]["name"]) ?></p>
   <p>身分：
@@ -30,7 +30,6 @@ $conn->close();
             case "S": echo "學生"; break;
             case "T": echo "老師"; break;
             case "M": echo "管理員"; break;
-            default: echo "未知"; break;
         }
       ?>
   </p>
@@ -42,11 +41,11 @@ $conn->close();
   </div>
 
   <?php
-  if ($_SESSION["user"]["role"] == "T" || $_SESSION["user"]["role"] == "M") {
-      echo "<p>老師/管理員免費參加。</p>";
-  } else {
-      echo "<p>學生自費餐點 60 元。</p>";
-  }
+    if ($_SESSION["user"]["role"] == "T" || $_SESSION["user"]["role"] == "M") {
+        echo "<p>老師/管理員免費參加。</p>";
+    } else {
+        echo "<p>學生自費餐點 60 元。</p>";
+    }
   ?>
 
   <input type="submit" value="送出報名" class="btn btn-success">
