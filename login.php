@@ -22,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <?php include("header.php"); ?>
+
 <h2>登入</h2>
 
 <?php if ($error): ?>
