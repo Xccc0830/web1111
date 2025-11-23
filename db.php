@@ -1,14 +1,12 @@
 <?php
 $host = "localhost";
-$user = "root"; 
-$pass = "";         
-$dbname = "practice";
+$user = "root";
+$pass = "";
+$dbname = "web期末專案";
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 
 if ($conn->connect_error) {
-    die("資料庫連線失敗：" . $conn->connect_error);
+    die("Database connection failed: " . $conn->connect_error);
 }
-
-$conn->set_charset("utf8mb4");
 ?>
