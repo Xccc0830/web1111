@@ -1,9 +1,3 @@
-<?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -21,7 +15,7 @@ if (session_status() === PHP_SESSION_NONE) {
         .navbar {
             background: #0d6efd;
         }
-        .navbar-brand, .nav-link, .navbar-text {
+        .navbar-brand, .nav-link {
             color: white !important;
         }
     </style>
@@ -40,26 +34,19 @@ if (session_status() === PHP_SESSION_NONE) {
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
-
                 <li class="nav-item">
                     <a class="nav-link" href="resident_list.php">住民列表</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link" href="resident_create.php">新增住民</a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="violation_list_all.php">違規管理</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="checkin_list_all.php">簽到管理</a>
+                </li>
             </ul>
-
-            <?php if (!empty($_SESSION["user"])): ?>
-                <span class="navbar-text me-3">
-                    👤 <?= htmlspecialchars($_SESSION["user"]) ?>
-                </span>
-                <a class="btn btn-light btn-sm" href="logout.php">登出</a>
-
-            <?php else: ?>
-                <a class="btn btn-light btn-sm" href="login.php">登入</a>
-            <?php endif; ?>
         </div>
     </div>
 </nav>
